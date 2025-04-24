@@ -2,7 +2,6 @@ import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import './style.css'
 
 export default function Sidebar({ onFilterChange, activeFilters }) {
-    // Define filter options
     const filterOptions = {
         type: ["Sport", "Cruiser", "Touring", "Adventure"],
         year: ["2020", "2021", "2022", "2023"],
@@ -15,7 +14,6 @@ export default function Sidebar({ onFilterChange, activeFilters }) {
 
     return (
         <div className="sidebar">
-            {/* Type Filters */}
             <div>
                 <p>Type</p>
                 <FormGroup>
@@ -34,7 +32,6 @@ export default function Sidebar({ onFilterChange, activeFilters }) {
                 </FormGroup>
             </div>
 
-            {/* Year Filters */}
             <div>
                 <p>Year</p>
                 <FormGroup>
@@ -53,7 +50,6 @@ export default function Sidebar({ onFilterChange, activeFilters }) {
                 </FormGroup>
             </div>
 
-            {/* Make Filters */}
             <div>
                 <p>Make</p>
                 <FormGroup>
