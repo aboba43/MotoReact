@@ -7,7 +7,6 @@ export default function Main({ filters }) {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Fetch data
     useEffect(() => {
         const getData = async () => {
             try {
@@ -34,25 +33,21 @@ export default function Main({ filters }) {
         getData();
     }, []);
 
-    // Apply filters whenever they change
     useEffect(() => {
         let filtered = motorcycles;
 
-        // Apply type filter
         if (filters.type.length > 0) {
             filtered = filtered.filter(moto => 
                 filters.type.includes(moto.type)
             );
         }
 
-        // Apply year filter
         if (filters.year.length > 0) {
             filtered = filtered.filter(moto => 
                 filters.year.includes(moto.year.toString())
             );
         }
 
-        // Apply make filter
         if (filters.make.length > 0) {
             filtered = filtered.filter(moto => 
                 filters.make.includes(moto.make)
