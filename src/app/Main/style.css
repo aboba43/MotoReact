@@ -48,7 +48,6 @@
     font-weight: 600;
 }
 
-/* Grid layout for better organization */
 .motorcycles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
